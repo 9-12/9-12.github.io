@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	<meta charset="UTF-8">
+	<title>仓鼠云盘</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+ 
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			flex-direction: column;
+			gap: 30px;
+			background: #222;
+		}
+
+        @font-face {
+	        font-family: aahdh;
+	        src: url(./aahdh.ttf);
+        }
+
+		@font-face {
+	        font-family: dyh;
+	        src: url(./dyh.ttf);
+        }
+
+        .title{
+            color: #eef5fb;
+            text-align: center;
+            font-size: 80px;
+			font-weight: lighter;
+            line-height: 60px;
+        }
+
+        a{
+            text-decoration: none;
+            text-align: center;
+			font-weight: lighter;
+            color: #ffffff;
+        }
+ 
+		.inputBox {
+			position: relative;
+			width: 250px;
+		}
+
+        .btn{
+            width: 130px;
+            height: 40px;
+            font-size: 17px;
+
+			/* global 94%+ browsers support */
+			background: linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%); 
+			/* safari 5.1+,chrome 10+ */
+			background: -webkit-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
+			/* ff 3.6+ */
+			background: -moz-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
+			/* opera 11.10+ */ 
+			background: -o-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
+			/* ie 10+ */
+			background: -ms-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
+
+            border-color: #28914a;
+            border-radius: 10px;
+            padding: center;
+            display: block;
+            margin: auto;
+        }
+		
+	</style>
+    <script>
+        function redirectToSite() {
+            window.location.href = 'https://9-12.github.io/f/0000.pdf';
+        }
+    </script>
+</head>
+ 
+<body>
+    <h2 class="title" style="font-family: aahdh;">文件标题</h1>
+	<br>
+    <div>
+		<button class="btn" onclick="redirectToSite()"><a style="font-family: dyh;">Get!</a></button>
+    </div>
+</body>
+</html>
