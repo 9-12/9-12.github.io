@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
  
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>仓鼠云盘</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
- 
-		body {
-			display: flex;
+    <style>
+
+        body{
+            display: flex;
 			justify-content: center;
 			align-items: center;
 			min-height: 100vh;
 			flex-direction: column;
 			gap: 30px;
-			background: #222;
-		}
-
-        @font-face {
-	        font-family: aahdh;
-	        src: url(./aahdh.ttf);
+            background-color: #222;
         }
 
-		@font-face {
-	        font-family: dyh;
-	        src: url(./dyh.ttf);
+        @keyframes logoimg {
+            from {
+                filter: drop-shadow(0px 0px 0px #28914a);
+            }
+
+            to {
+                filter: drop-shadow(0px 0px 30px #28914a);
+            }
         }
 
-        .title{
-            color: #eef5fb;
-            text-align: center;
-            font-size: 80px;
-			font-weight: lighter;
-            line-height: 60px;
+        .logoimg {
+            margin:300px;
+            width: 300px;
+            margin:20px;
+            animation: logoimg 1.5s ease-in-out infinite alternate;
         }
 
-        a{
-            text-decoration: none;
-            text-align: center;
-			font-weight: lighter;
-            color: #ffffff;
+        .cs{
+            font-style: italic;
+            font-weight: bolder;
         }
- 
-		.inputBox {
+
+        .tiqu{
+            font-weight: bolder;
+            color: #fff;
+        }
+
+        .inputBox {
 			position: relative;
 			width: 250px;
 		}
@@ -169,17 +167,15 @@
         }
     </script>
 </head>
- 
 <body>
-    <h1 class="title" style="font-family: aahdh;">仓鼠云盘</h1>
-	<br>
-	<div class="inputBox">
-		<input type="text" id="userInput" required="required">
-		<span style="font-family: dyh;">请输入仓鼠码</span>
-		<i></i>
-	</div>
-    <div>
-		<button class="btn" onclick="redirectToSite()"><a style="font-family: dyh;">提取</a></button>
-    </div>
+        <img class="logoimg" src="./logo.png" alt="logo图片">
+        <div class="inputBox">
+            <input type="text" id="userInput" required="required">
+            <span class="cs">请输入仓鼠码</span>
+            <i></i>
+        </div>
+        <div>
+            <button class="btn" onclick="redirectToSite()"><a class="tiqu">提取</a></button>
+        </div>
 </body>
 </html>

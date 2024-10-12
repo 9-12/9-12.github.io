@@ -1,55 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
  
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>仓鼠云盘</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
- 
-		body {
-			display: flex;
+    <style>
+
+        body{
+            display: flex;
 			justify-content: center;
 			align-items: center;
 			min-height: 100vh;
 			flex-direction: column;
 			gap: 30px;
-			background: #222;
-		}
-
-        @font-face {
-	        font-family: aahdh;
-	        src: url(./aahdh.ttf);
+            background-color: #222;
         }
 
-		@font-face {
-	        font-family: dyh;
-	        src: url(./dyh.ttf);
-        }
+        @keyframes pageimg {
+            from {
+                box-shadow:0px 0px 0px #28914a;
+            }
 
-        .title{
-            color: #eef5fb;
-            text-align: center;
-            font-size: 80px;
-			font-weight: lighter;
-            line-height: 60px;
+            to {
+                box-shadow:0px 0px 20px #28914a;
+            }
         }
-
-        a{
-            text-decoration: none;
-            text-align: center;
-			font-weight: lighter;
-            color: #ffffff;
-        }
- 
-		.inputBox {
-			position: relative;
-			width: 250px;
-		}
 
         .btn{
             width: 130px;
@@ -73,20 +49,34 @@
             display: block;
             margin: auto;
         }
-		
+
+        .pageimg {
+            margin:300px;
+            width: 300px;
+            margin:20px;
+            animation: pageimg 2s ease-in-out infinite alternate;
+        }
+
+        h2{
+            color: #fff;
+            font-weight: bolder;
+        }
+
+		.tiqu{
+            font-weight: bolder;
+            color: #fff;
+        }
 	</style>
     <script>
         function redirectToSite() {
-            window.location.href = 'https://9-12.github.io/f/0000.pdf';
+            window.location.href = '';
         }
     </script>
 </head>
- 
 <body>
-    <h2 class="title" style="font-family: aahdh;">文件标题</h1>
-	<br>
-    <div>
-		<button class="btn" onclick="redirectToSite()"><a style="font-family: dyh;">Get!</a></button>
-    </div>
+        <h2 class="pagetitle">标题</h2>
+		<div>
+			<button class="btn" onclick="redirectToSite()"><a class="tiqu">提取</a></button>
+		</div>
 </body>
 </html>
