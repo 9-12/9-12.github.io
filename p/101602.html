@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+ 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>仓鼠云盘</title>
+    <style>
+
+        body{
+            display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			flex-direction: column;
+			gap: 30px;
+            background-color: #222;
+        }
+
+        @keyframes pageimg {
+            from {
+                box-shadow:0px 0px 0px #28914a;
+            }
+
+            to {
+                box-shadow:0px 0px 30px #28914a;
+            }
+        }
+
+        .pageimg {
+            margin:300px;
+            width: 300px;
+            margin:20px;
+            animation: pageimg 2s ease-in-out infinite alternate;
+        }
+
+        h2{
+            color: #fff;
+            font-weight: bolder;
+        }
+	</style>
+</head>
+<body>
+        <h2 class="pagetitle">随堂小测第2课答案</h2>
+        <img class="pageimg" src="https://pic.imgdb.cn/item/670f86a5d29ded1a8c180895.jpg">
+</body>
+</html>
