@@ -1,166 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
- 
-<head>
-	<meta charset="UTF-8">
+ <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<title>仓鼠云盘</title>
-    <style>
-
-        body{
-            display: flex;
-			justify-content: center;
-			align-items: center;
-			min-height: 100vh;
-			flex-direction: column;
-			gap: 30px;
-            background-color: #222;
-        }
-
-        @keyframes logoimg {
-            from {
-                filter: drop-shadow(0px 0px 0px #28914a);
-            }
-
-            to {
-                filter: drop-shadow(0px 0px 35px #28914a);
-            }
-        }
-
-        .logoimg {
-            margin:300px;
-            width: 300px;
-            margin:20px;
-            animation: logoimg 1.5s ease-in-out infinite alternate;
-        }
-
-        .cs{
-            font-style: italic;
-            font-weight: bolder;
-        }
-
-        .tiqu{
-            font-weight: bolder;
-            color: #fff;
-        }
-
-        .inputBox {
-			position: relative;
-			width: 250px;
-		}
-
-        .btn{
-            width: 130px;
-            height: 40px;
-            font-size: 17px;
-
-			/* global 94%+ browsers support */
-			background: linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%); 
-			/* safari 5.1+,chrome 10+ */
-			background: -webkit-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
-			/* ff 3.6+ */
-			background: -moz-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
-			/* opera 11.10+ */ 
-			background: -o-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
-			/* ie 10+ */
-			background: -ms-linear-gradient(155deg,#9BE15D 7.12%,#00E3AE 100%);
-
-            border-color: #28914a;
-            border-radius: 10px;
-            padding: center;
-            display: block;
-            margin: auto;
-        }
-
- 
-		.inputBox input {
-			width: 100%;
-			padding: 10px 0 5px;
-			background: transparent;
-			outline: none;
-			box-shadow: none;
-			border: none;
-			color: #fff;
-			font-size: 1em;
-			letter-spacing: 0.1em;
-			transition: 0.5s;
-		}
- 
-		.inputBox span {
-			position: absolute;
-			left: 0;
-			padding: 10px 0 5px;
-			pointer-events: none;
-			font-size: 1em;
-			color: rgba(255, 255, 255, 0.5);
-			text-transform: uppercase;
-			/* 定义无小写字母，仅有大写字母 */
-			letter-spacing: 0.1em;
-			/* 是增加（值为正）或减少（值为负）字符间距 */
-			transition: 0.5s;
-		}
- 
-		.inputBox input:valid~span,
-		/* 表单元素的值需要根据指定条件验证时设置指定样式 */
- 
-		.inputBox input:focus~span
- 
-		/* 选择具有焦点的时候 */
-			{
-			color: #b0a4e3;
-			transform: translateY(-16px);
-			/* 将文字向Y轴（向上）平移16px */
-			font-size: 0.65em;
-		}
- 
-		.inputBox i
- 
-		/* 可见的一个线 */
-			{
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 2px;
-			background: #fff;
-			overflow: hidden;
-		}
- 
-		.inputBox i::before
- 
-		/* 在i标签的左边创建（伪元素）一个跟i等大的一条线，加上炫彩颜色 */
-			{
-			content: '';
-			position: absolute;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg, #EEBD89, #D13ABD, #C973FF, #6CC6CB, #9FA5D5, #EAD6EE);
-			animation: runing 1s linear infinite;
-			transition: 0.5s;
-		}
- 
-		.inputBox input:valid~i::before,
-		.inputBox input:focus~i::before {
-			left: 0;
-		}
- 
-		/* 创建动画 */
-		@keyframes runing {
-			0% {
-				background-position-x: 0;
-			}
- 
-			100% {
-				background-position-x: 250px;
-			}
-		}
-
-		footer{
-			color: #ffffff9a;
-			font-size: small;
-		}
-	</style>
+    <link rel="stylesheet" href="index.css">
     <script>
         function redirectToSite() {
             var userInput = document.getElementById('userInput').value;
@@ -184,6 +28,7 @@
         </div>
 </body>
 <footer>
-	<a>Copyright © 林昱辰. All Rights Reserved.</a>
+	<a>Copyright © 林昱辰. All Rights Reserved.</a><br>
+	<a href="login.html" class="logout-link">内联登录</a >
 </footer>
 </html>

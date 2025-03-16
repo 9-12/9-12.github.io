@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>内联首页-仓鼠</title>
+        <script src="auth.js"></script>
+        <script>
+            // 本地权限声明（允许所有有效用户）
+            //window.__localPagePermissions__ = Object.keys(validUsers);
+            // 本地权限声明（全员禁用）
+            //window.__localPagePermissions__ = [];
+            // 本地权限声明（允许下列用户）
+            window.__localPagePermissions__ = ['仓鼠'];
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>欢迎仓鼠</h1>
+        <a href=" " onclick="logout()" class="logout-link">退出登录</a >
+        <script>validateAccess();</script>
+    </body>
+</html>

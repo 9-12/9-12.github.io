@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>内联首页-林昱辰</title>
+        <script src="auth.js"></script>
+        <script>
+            // 本地权限声明（允许所有有效用户）
+            //window.__localPagePermissions__ = Object.keys(validUsers);
+            // 本地权限声明（全员禁用）
+            //window.__localPagePermissions__ = [];
+            // 本地权限声明（允许下列用户）
+            window.__localPagePermissions__ = ['lyc'];
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>欢迎林昱辰</h1>
+        <div class="login-container">
+            <div class="inputBox">
+                <input type="text" id="userInput" required="required">
+                <span class="cs">请输入仓鼠码</span>
+                <i></i>
+            </div><br>
+            <div style="text-align: center;">
+                <button><a class="tiqu">提取</a></button>
+            </div>
+        </div><br>
+        <div class="login-container">
+            <h2>激情英语一点通</h2>
+            <a class="links" half="">答案 1-主书.pdf</a><br>
+            <a class="links" half="">答案 2-课时训练.pdf</a><br>
+            <a class="links" half="">答案 3-基础巩固.pdf</a><br>
+            <a class="links" half="">答案 4-话题写作.pdf</a><br>
+            <a class="links" half="">答案 5-听力集训.pdf</a><br>
+        </div>
+        <a href=" " onclick="logout()" class="logout-link">退出登录</a >
+        <script>validateAccess();</script>
+    </body>
+</html>

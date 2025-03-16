@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>内联认证</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>内联认证</h2>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="账户" autocomplete="username">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="密码" autocomplete="current-password">
+            </div>
+            <button onclick="attemptLogin()">登 录</button>
+        </div>
+        <script src="auth.js"></script>
+    </body>
+</html>

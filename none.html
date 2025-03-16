@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>访问拒绝</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .countdown {
+            font-size: 1.2em;
+            color: var(--text-color);
+            text-align: center;
+            margin-top: 1rem;
+            }
+            .countdown-number {
+            color: #ff453a;
+            font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2 style="color: #ff453a;">️ 访问权限不足</h2>
+            <p style="text-align: center; color: var(--text-color);">您没有查看此内容的权限<br>
+                <span class="countdown">
+                    <span class="countdown-number">3</span>秒后自动返回首页
+                </span>
+            </p >
+        </div>
+
+    <script>
+        // 倒计时逻辑
+        let seconds = 3;
+        const countdownElement = document.querySelector('.countdown-number');
+
+        const timer = setInterval(() => {
+        seconds--;
+        countdownElement.textContent = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(timer);
+            window.location.href = 'login.html';
+            }
+        }, 1000);
+    </script>
+    </body>
+</html>
