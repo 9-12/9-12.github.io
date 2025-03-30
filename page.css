@@ -1,0 +1,286 @@
+:root {
+    --spacing: 20px;
+    --card-bg: rgba(38, 38, 39, 0);
+    --card-ng: rgba(49, 59, 47, 0.068);
+    --primary-color: rgba(10, 132, 255, 0.9);
+    --border-radius: 18px;
+    --footer-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a1a, #2c2c2e);
+    color: rgba(255, 255, 255, 0.85);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    padding-bottom: var(--footer-height);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px var(--spacing);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.link {
+    color: antiquewhite;
+}
+
+.logout-link {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.logout-link:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/* 独立卡片样式 */
+.hero-card {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: var(--spacing);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* 卡片容器布局 */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing);
+    align-items: stretch;
+}
+
+/* 普通卡片样式 */
+.card {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    background: var(--card-ng);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* 悬停动画 */
+.card:hover, .hero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 遮罩效果 */
+.card-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(transparent, var(--card-bg) 70%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: var(--border-radius);  
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.card-mask button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card-mask button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 页脚样式 */
+footer {
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 入场动画 */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: cardEntrance 0.6s ease forwards;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .hero-card {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 25px;
+    }
+}
+
+
+/* 提取 */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+    
+button:hover {
+    opacity: 0.88;
+    transform: scale(0.98);
+}
+    
+button:active {
+    transform: scale(0.95);
+}
+
+.tiqu{
+    font-weight: bolder;
+    color: #fff;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+    margin: auto;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 0 5px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0 5px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span{
+    color: #b0a4e3;
+    transform: translateY(-16px);
+    font-size: 0.65em;
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.inputBox i::before{
+    content: '';
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #EEBD89, #D13ABD, #C973FF, #6CC6CB, #9FA5D5, #EAD6EE);
+    animation: runing 1s linear infinite;
+    transition: 0.5s;
+}
+
+.inputBox input:valid~i::before,
+.inputBox input:focus~i::before {
+    left: 0;
+}
+
+@keyframes runing {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 250px;
+    }
+}

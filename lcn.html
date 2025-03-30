@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>内联首页-林辰凝</title>
-        <script src="auth.js"></script>
-        <script>
-            // 本地权限声明（允许所有有效用户）
-            //window.__localPagePermissions__ = Object.keys(validUsers);
-            // 本地权限声明（全员禁用）
-            //window.__localPagePermissions__ = [];
-            // 本地权限声明（允许下列用户）
-            window.__localPagePermissions__ = ['lcn'];
-        </script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>欢迎林辰凝</h1>
-        <div class="login-container">
-            <div class="inputBox">
-                <input type="text" id="userInput" required="required">
-                <span class="cs">请输入仓鼠码</span>
-                <i></i>
-            </div><br>
-            <div style="text-align: center;">
-                <button><a class="tiqu">提取</a></button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内联首页-用户</title>
+    <link rel="stylesheet" href="page.css">
+    <script src="auth.js"></script>
+    <script>
+        // 本地权限声明（允许所有有效用户）
+        //window.__localPagePermissions__ = Object.keys(validUsers);
+        // 本地权限声明（全员禁用）
+        //window.__localPagePermissions__ = [];
+        // 本地权限声明（允许下列用户）
+        window.__localPagePermissions__ = ['lcn'];
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎lcn</h1>
+        
+        <!-- 独立卡片 -->
+        <div class="hero-card">
+            <div class="card-content">
+                <div class="inputBox">
+                    <div class="inputBox">
+                    <input type="text" id="userInput" required="required">
+                    <span class="cs">请输入仓鼠码</span>
+                    <i></i>
+                </div><br>
+                <div>
+                    <button onclick="redirectToSite()"><a class="tiqu">提取</a></button>
+                </div>
             </div>
         </div><br>
-        <div class="login-container">
-            <h2>激情英语一点通</h2>
-            <a class="links" half="">答案 1-主书.pdf</a><br>
-            <a class="links" half="">答案 2-课时训练.pdf</a><br>
-            <a class="links" half="">答案 3-基础巩固.pdf</a><br>
-            <a class="links" half="">答案 4-话题写作.pdf</a><br>
-            <a class="links" half="">答案 5-听力集训.pdf</a><br>
-            <a class="links" half="">答案 6-阶段测试卷.pdf</a><br>
+
+        <!-- 自动布局卡片容器 -->
+        <!--
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-content">
+                    <h3>英语一典通答案</h3>
+                    <a href="login.html" class="link">答案 1-主书.pdf</a ><br>
+                    <a href="login.html" class="link">答案 2-课时训练.pdf</a ><br>
+                    <a href="login.html" class="link">答案 3-基础巩固.pdf</a ><br>
+                    <a href="login.html" class="link">答案 4-话题写作.pdf</a ><br>
+                    <a href="login.html" class="link">答案 5-听力集训.pdf</a ><br>
+                    <a href="login.html" class="link">答案 6-阶段测试卷.pdf</a ><br>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>卡片标题</h3>
+                    <p>内容卡片</p>
+                    <div class="card-mask">
+                        <button onclick="location.href='details.html'">展开全部 »</button>
+                    </div>
+                </div>
+            </div>-->
+
         </div>
-        <a href=" " onclick="logout()" class="logout-link">退出登录</a >
-        <script>validateAccess();</script>
-    </body>
+    </div>
+    
+    <a href=" " onclick="logout()" class="logout-link">退出登录</a >
+    <script>validateAccess();</script>
+    <footer>
+        <p>Copyright © 林昱辰. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
