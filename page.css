@@ -1,8 +1,6 @@
 :root {
     --spacing: 20px;
-    --card-bg: rgba(38, 38, 39, 0);
-    --card-ng: rgba(49, 59, 47, 0.068);
-    --primary-color: rgba(10, 132, 255, 0.9);
+    --card-bg: rgba(25, 25, 35, 0.6);
     --border-radius: 18px;
     --footer-height: 80px;
 }
@@ -35,43 +33,6 @@ h1 {
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.link {
-    color: antiquewhite;
-}
-
-.logout-link {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: underline;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.logout-link:hover {
-    opacity: 0.7;
-    text-decoration: none;
-}
-
-/* 独立卡片样式 */
-.hero-card {
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    padding: 40px;
-    margin-bottom: var(--spacing);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    min-height: 200px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
 /* 卡片容器布局 */
 .cards-container {
     display: grid;
@@ -84,9 +45,9 @@ h1 {
 .card {
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    background: var(--card-ng);
+    background: var(--card-bg);
     border-radius: var(--border-radius);
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
@@ -121,18 +82,18 @@ h1 {
     padding-bottom: 1rem;
     opacity: 1;
     transition: opacity 0.3s ease;
-    border-bottom-left-radius: var(--border-radius);  
-    border-bottom-right-radius: var(--border-radius);
+    border-radius: var(--border-radius);
 }
 
 .card-mask button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(25, 25, 35, 0.281);
+    border: 1px solid rgba(255, 255, 255, 0);
     color: #fff;
     padding: 8px 20px;
-    border-radius: 20px;
+    width: 100%;
+    border-radius: 0px;
     cursor: pointer;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100vh);
     transition: all 0.3s ease;
 }
 
@@ -146,8 +107,6 @@ footer {
     bottom: 0;
     width: 100%;
     height: var(--footer-height);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,4 +242,26 @@ button:active {
     100% {
         background-position-x: 250px;
     }
+}
+
+
+.link {
+    color: antiquewhite;
+}
+
+.logout-link {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.logout-link:hover {
+    opacity: 0.7;
+    text-decoration: none;
 }
