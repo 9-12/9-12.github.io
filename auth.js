@@ -4,7 +4,8 @@ const validUsers = {
     '仓鼠': 'sb',
     'cjx': '100412',
     'lcn': 'yeah',
-    'lzh': '114514'
+    'lzh': '114514',
+    'cyw': 'cyw111'
 };
     
 const corePermissions = {
@@ -13,6 +14,7 @@ const corePermissions = {
     'cjx.html': ['cjx'],
     'lcn.html': ['lcn'],
     'lzh.html': ['lzh'],
+    'cyw.html': ['cyw'],
 };
 
 
